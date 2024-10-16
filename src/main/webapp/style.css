@@ -1,0 +1,263 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    color: #333;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Estilo del header */
+header {
+    background-color: #ff7f00; /* Color naranja */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo-container img.logo {
+    width: 60px; /* Tamaño más grande del logo */
+    height: auto;
+}
+
+header .logo-container h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1; /* Permitir que el nav crezca y ocupe el espacio disponible */
+    justify-content: center; /* Centrar los enlaces */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 15px; /* Añadir padding para evitar saltos en hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    border-radius: 5px; /* Añadir bordes redondeados para suavizar el hover */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Botón blanco semitransparente */
+    color: black; /* Cambiar texto a negro */
+}
+
+nav .dropdown {
+    position: relative;
+    margin-left: 15px;
+}
+
+nav .dropbtn {
+    background-color: #e67300; /* Color naranja oscuro */
+    color: white;
+    padding: 8px 15px; /* Mantener padding consistente */
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de letra más pequeño */
+    border-radius: 5px;
+}
+
+nav .dropbtn:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Efecto hover para el botón de dropdown */
+    color: black;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px; /* Tamaño de letra más pequeño */
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sección de bienvenida */
+section.home {
+    padding: 50px;
+    background-color: #ffe5cc; /* Color fondo claro naranja */
+    text-align: center;
+}
+
+section.home h2 {
+    font-size: 36px;
+    color: #ff7f00; /* Color naranja */
+}
+
+section.home p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* Sección del carousel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 400px; /* Altura del carrusel */
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%; /* Altura del carrusel */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #ff7f00; /* Color naranja */
+}
+
+/* Sección de servicios */
+section.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.servicio {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servicio img.icon {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.servicio h2 {
+    color: #ff7f00; /* Color naranja */
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-reservar {
+    background-color: #e67300; /* Color naranja oscuro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-reservar:hover {
+    background-color: #cc6600; /* Color naranja más oscuro */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #ff7f00; /* Color naranja */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .footer-nav {
+    margin-top: 10px;
+}
+
+footer .footer-nav a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: black; /* Cambiado a negro */
+}
+
+footer .footer-nav a:hover {
+    color: white;
+}
+
+/* Centrado del footer */
+footer .footer-nav {
+    display: flex;
+    justify-content: center; /* Centrar los enlaces en el footer */
+    align-items: center;
+}
